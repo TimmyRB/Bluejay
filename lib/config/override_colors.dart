@@ -1,0 +1,46 @@
+import 'package:bluejay/config/themeing.dart';
+import 'package:flutter/material.dart';
+
+class OverrideTheme extends BlueThemeData {
+  @override
+  Color? primaryColor;
+
+  @override
+  Color? secondaryColor;
+
+  @override
+  Color? backgroundColor;
+
+  @override
+  Color? cardColor;
+
+  @override
+  Color? boxColor;
+
+  @override
+  TextTheme? textTheme;
+
+  @override
+  ButtonStyle? filledButtonStyle;
+
+  @override
+  ButtonStyle? elevatedButtonStyle;
+
+  @override
+  ButtonStyle? textButtonStyle;
+
+  @override
+  ButtonStyle? outlinedButtonStyle;
+
+  OverrideTheme({
+    this.primaryColor,
+    this.secondaryColor,
+    this.backgroundColor,
+    this.cardColor,
+    this.boxColor,
+    this.filledButtonStyle,
+    this.elevatedButtonStyle,
+    this.textButtonStyle,
+    this.outlinedButtonStyle,
+  });
+}
