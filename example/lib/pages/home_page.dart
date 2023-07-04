@@ -158,32 +158,14 @@ class _MyAppState extends State<HomePage> {
                     children: [
                       Flexible(
                         child: FilledButton(
-                          child: const Text('Filled Button'),
+                          child: const Text('Primary'),
                           onPressed: () {},
                         ),
                       ),
                       const SizedBox(width: 8.0),
-                      Flexible(
-                        child: ElevatedButton(
-                          child: const Text('Elevated Button'),
-                          onPressed: () {},
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 8.0),
-                  Row(
-                    children: [
                       Flexible(
                         child: TextButton(
-                          child: const Text('Text Button'),
-                          onPressed: () {},
-                        ),
-                      ),
-                      const SizedBox(width: 8.0),
-                      Flexible(
-                        child: OutlinedButton(
-                          child: const Text('Outlined Button'),
+                          child: const Text('Secondary'),
                           onPressed: () {},
                         ),
                       ),
