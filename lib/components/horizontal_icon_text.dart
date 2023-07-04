@@ -31,7 +31,7 @@ class BlueHorizontalIconAndText extends StatelessWidget {
           child: Column(
             children: [
               DefaultTextStyle.merge(
-                style: Theme.of(context).textTheme.bodyLarge,
+                style: Theme.of(context).textTheme.bodyMedium,
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -39,7 +39,10 @@ class BlueHorizontalIconAndText extends StatelessWidget {
                 ),
               ),
               DefaultTextStyle.merge(
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(context)
+                    .textTheme
+                    .bodySmall
+                    ?.copyWith(color: Theme.of(context).colorScheme.secondary),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
