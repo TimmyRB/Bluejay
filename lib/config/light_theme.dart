@@ -18,6 +18,12 @@ class LightTheme extends BlueThemeData {
   Color? boxColor = const Color(0xFFE0E0E0);
 
   @override
+  String? fontFamily = 'UberMoveText';
+
+  @override
+  String? package = 'bluejay';
+
+  @override
   TextTheme? textTheme = const TextTheme(
     displayLarge: TextStyle(
       color: Colors.black,
@@ -132,8 +138,6 @@ class LightTheme extends BlueThemeData {
     foregroundColor: MaterialStateProperty.resolveWith((states) {
       if (states.contains(MaterialState.disabled)) {
         return const Color(0xFFA6A6A6);
-      } else if (states.contains(MaterialState.pressed)) {
-        return Colors.white;
       }
       return Colors.white;
     }),

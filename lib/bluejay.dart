@@ -39,6 +39,8 @@ class Bluejay {
       scaffoldBackgroundColor:
           overrideTheme?.backgroundColor ?? theme.backgroundColor,
       highlightColor: overrideTheme?.boxColor ?? theme.boxColor,
+      fontFamily: overrideTheme?.fontFamily ?? theme.fontFamily,
+      package: overrideTheme?.package ?? theme.package,
       textTheme: overrideTheme?.textTheme ?? theme.textTheme,
       appBarTheme: AppBarTheme(
         backgroundColor:

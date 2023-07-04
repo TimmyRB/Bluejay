@@ -18,6 +18,12 @@ class OverrideTheme extends BlueThemeData {
   Color? boxColor;
 
   @override
+  String? fontFamily;
+
+  @override
+  String? package;
+
+  @override
   TextTheme? textTheme;
 
   @override
