@@ -24,6 +24,28 @@ class LightTheme extends BlueThemeData {
   String? package = 'bluejay';
 
   @override
+  InputDecorationTheme? inputDecorationTheme = InputDecorationTheme(
+    filled: true,
+    fillColor: const Color(0xFFE8E8E8),
+    contentPadding: const EdgeInsets.symmetric(
+      horizontal: 16.0,
+      vertical: 14.0,
+    ),
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8.0),
+      borderSide: BorderSide.none,
+    ),
+    floatingLabelBehavior: FloatingLabelBehavior.never,
+    labelStyle: const TextStyle(
+      fontFamily: 'UberMoveText',
+      package: 'bluejay',
+      fontSize: 18.0,
+      fontWeight: FontWeight.w400,
+      color: Color(0xFF5E5E5E),
+    ),
+  );
+
+  @override
   TextTheme? textTheme = const TextTheme(
     displayLarge: TextStyle(
       color: Colors.black,

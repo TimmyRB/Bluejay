@@ -9,6 +9,7 @@ abstract class BlueThemeData {
   abstract final String? fontFamily;
   abstract final String? package;
   abstract final TextTheme? textTheme;
+  abstract final InputDecorationTheme? inputDecorationTheme;
   abstract final ButtonStyle? filledButtonStyle;
   abstract final ButtonStyle? elevatedButtonStyle;
   abstract final ButtonStyle? textButtonStyle;

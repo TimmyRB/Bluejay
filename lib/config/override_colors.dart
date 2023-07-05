@@ -27,6 +27,9 @@ class OverrideTheme extends BlueThemeData {
   TextTheme? textTheme;
 
   @override
+  InputDecorationTheme? inputDecorationTheme;
+
+  @override
   ButtonStyle? filledButtonStyle;
 
   @override
