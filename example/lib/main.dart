@@ -1,4 +1,6 @@
 import 'package:bluejay/bluejay.dart';
+import 'package:bluejay_example/pages/buttons_page.dart';
+import 'package:bluejay_example/pages/financial_example.dart';
 import 'package:bluejay_example/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +17,12 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: Bluejay.lightTheme(),
       darkTheme: Bluejay.darkTheme(),
-      home: const HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/financial_example': (context) => const FinancialExample(),
+        '/buttons': (context) => const ButtonsPage(),
+      },
     );
   }
 }
