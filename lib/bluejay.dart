@@ -9,6 +9,7 @@ export 'package:bluejay/components/horizontal_action.dart';
 export 'package:bluejay/components/title_with_filter.dart';
 export 'package:bluejay/components/breakdown.dart';
 export 'package:bluejay/components/horizontal_icon_text.dart';
+export 'package:bluejay/components/code_block.dart';
 
 class Bluejay {
   static ThemeData lightTheme({OverrideTheme? overrideColors}) {
@@ -54,6 +55,9 @@ class Bluejay {
         ),
         elevation: 0.0,
         centerTitle: false,
+        iconTheme: IconThemeData(
+          color: overrideTheme?.primaryColor ?? theme.primaryColor,
+        ),
       ),
       cardTheme: CardTheme(
         color: overrideTheme?.cardColor ?? theme.cardColor,
