@@ -10,6 +10,7 @@ export 'package:bluejay/components/title_with_filter.dart';
 export 'package:bluejay/components/breakdown.dart';
 export 'package:bluejay/components/horizontal_icon_text.dart';
 export 'package:bluejay/components/code_block.dart';
+export 'package:bluejay/components/copy_button.dart';
 
 class Bluejay {
   static ThemeData lightTheme({OverrideTheme? overrideColors}) {
@@ -68,6 +69,8 @@ class Bluejay {
         ),
       ),
       dividerColor: overrideTheme?.secondaryColor ?? theme.secondaryColor,
+      inputDecorationTheme:
+          overrideTheme?.inputDecorationTheme ?? theme.inputDecorationTheme,
       filledButtonTheme: FilledButtonThemeData(
         style: overrideTheme?.filledButtonStyle ?? theme.filledButtonStyle,
       ),

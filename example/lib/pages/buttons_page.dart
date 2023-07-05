@@ -52,8 +52,7 @@ const TextButton(
           SliverSafeArea(
             top: false,
             sliver: SliverPadding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
               sliver: SliverToBoxAdapter(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -85,19 +84,7 @@ const TextButton(
                       code: primaryCode,
                       language: 'dart',
                       actions: [
-                        InkWell(
-                          onTap: () {
-                            Clipboard.setData(
-                              ClipboardData(text: primaryCode),
-                            );
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text('Copied to clipboard'),
-                              ),
-                            );
-                          },
-                          child: const Icon(Icons.copy),
-                        ),
+                        BlueCopyButton(content: primaryCode),
                       ],
                     ),
                     const SizedBox(height: 16.0),
@@ -105,19 +92,7 @@ const TextButton(
                       code: primaryDisabledCode,
                       language: 'dart',
                       actions: [
-                        InkWell(
-                          onTap: () {
-                            Clipboard.setData(
-                              ClipboardData(text: primaryDisabledCode),
-                            );
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text('Copied to clipboard'),
-                              ),
-                            );
-                          },
-                          child: const Icon(Icons.copy),
-                        ),
+                        BlueCopyButton(content: primaryDisabledCode),
                       ],
                     ),
                     const SizedBox(height: 16.0),
@@ -148,19 +123,7 @@ const TextButton(
                       code: secondaryCode,
                       language: 'dart',
                       actions: [
-                        InkWell(
-                          onTap: () {
-                            Clipboard.setData(
-                              ClipboardData(text: secondaryCode),
-                            );
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text('Copied to clipboard'),
-                              ),
-                            );
-                          },
-                          child: const Icon(Icons.copy),
-                        ),
+                        BlueCopyButton(content: secondaryCode),
                       ],
                     ),
                     const SizedBox(height: 16.0),
@@ -168,19 +131,7 @@ const TextButton(
                       code: secondaryDisabledCode,
                       language: 'dart',
                       actions: [
-                        InkWell(
-                          onTap: () {
-                            Clipboard.setData(
-                              ClipboardData(text: secondaryDisabledCode),
-                            );
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text('Copied to clipboard'),
-                              ),
-                            );
-                          },
-                          child: const Icon(Icons.copy),
-                        ),
+                        BlueCopyButton(content: secondaryDisabledCode),
                       ],
                     ),
                   ],
