@@ -1,7 +1,6 @@
 import 'package:bluejay/bluejay.dart';
 import 'package:bluejay_example/side_drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class ButtonsPage extends StatefulWidget {
   const ButtonsPage({Key? key}) : super(key: key);
@@ -26,14 +25,14 @@ const FilledButton(
 )''';
 
   String secondaryCode = '''
-// Active Primary Button
+// Active Secondary Button
 TextButton(
 \tonPressed: () {},
 \tchild: const Text('Active'),
 )''';
 
   String secondaryDisabledCode = '''
-// Disabled Primary Button
+// Disabled Secondary Button
 const TextButton(
 \tonPressed: null,
 \tchild: Text('Disabled'),
@@ -51,6 +50,7 @@ const TextButton(
           ),
           SliverSafeArea(
             top: false,
+            minimum: const EdgeInsets.only(bottom: 16.0),
             sliver: SliverPadding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               sliver: SliverToBoxAdapter(
