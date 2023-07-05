@@ -21,6 +21,10 @@ class BlueCodeBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    BorderRadiusGeometry themeBorderRadius =
+        (Theme.of(context).cardTheme.shape as RoundedRectangleBorder)
+            .borderRadius;
+
     return Card(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -84,7 +88,7 @@ class BlueCodeBlock extends StatelessWidget {
                       child: Theme(
                         data: ThemeData(
                           iconTheme: IconThemeData(
-                            size: 16.0,
+                            size: 14.0,
                             color: Theme.of(context).colorScheme.onPrimary,
                           ),
                         ),
