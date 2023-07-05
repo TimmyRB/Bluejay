@@ -12,6 +12,7 @@ export 'package:bluejay/components/horizontal_icon_text.dart';
 export 'package:bluejay/components/code_block.dart';
 export 'package:bluejay/components/copy_button.dart';
 export 'package:bluejay/components/password_field.dart';
+export 'package:bluejay/components/search_field.dart';
 
 class Bluejay {
   static ThemeData lightTheme({OverrideTheme? overrideColors}) {

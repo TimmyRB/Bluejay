@@ -8,6 +8,8 @@ class BluePasswordFormField extends StatefulWidget {
     this.initialValue,
     this.validator,
     this.textInputAction,
+    this.onSubmitted,
+    this.onSaved,
     this.isNewPassword = false,
     this.visibleIcon = Icons.visibility_off,
     this.hiddenIcon = Icons.visibility,
@@ -18,6 +20,8 @@ class BluePasswordFormField extends StatefulWidget {
   final String? initialValue;
   final String? Function(String?)? validator;
   final TextInputAction? textInputAction;
+  final Function(String)? onSubmitted;
+  final Function(String?)? onSaved;
 
   final bool isNewPassword;
   final IconData visibleIcon;
@@ -37,6 +41,8 @@ class _BluePasswordFormFieldState extends State<BluePasswordFormField> {
       initialValue: widget.initialValue,
       validator: widget.validator,
       textInputAction: widget.textInputAction,
+      onFieldSubmitted: widget.onSubmitted,
+      onSaved: widget.onSaved,
       keyboardType: TextInputType.visiblePassword,
       obscureText: !_showPassword,
       autofillHints: widget.isNewPassword
