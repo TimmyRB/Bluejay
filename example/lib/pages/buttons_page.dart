@@ -82,7 +82,7 @@ const TextButton(
                     const SizedBox(height: 16.0),
                     BlueCodeBlock(
                       code: primaryCode,
-                      language: 'dart',
+                      language: CodeBlockLanguage.dart,
                       actions: [
                         BlueCopyButton(content: primaryCode),
                       ],
@@ -90,7 +90,7 @@ const TextButton(
                     const SizedBox(height: 16.0),
                     BlueCodeBlock(
                       code: primaryDisabledCode,
-                      language: 'dart',
+                      language: CodeBlockLanguage.dart,
                       actions: [
                         BlueCopyButton(content: primaryDisabledCode),
                       ],
@@ -121,7 +121,7 @@ const TextButton(
                     const SizedBox(height: 16.0),
                     BlueCodeBlock(
                       code: secondaryCode,
-                      language: 'dart',
+                      language: CodeBlockLanguage.dart,
                       actions: [
                         BlueCopyButton(content: secondaryCode),
                       ],
@@ -129,7 +129,7 @@ const TextButton(
                     const SizedBox(height: 16.0),
                     BlueCodeBlock(
                       code: secondaryDisabledCode,
-                      language: 'dart',
+                      language: CodeBlockLanguage.dart,
                       actions: [
                         BlueCopyButton(content: secondaryDisabledCode),
                       ],

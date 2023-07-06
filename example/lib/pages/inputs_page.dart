@@ -68,7 +68,7 @@ DropdownButtonFormField(
                     const SizedBox(height: 16.0),
                     BlueCodeBlock(
                       code: defaultTextFieldCode,
-                      language: 'dart',
+                      language: CodeBlockLanguage.dart,
                       actions: [
                         BlueCopyButton(content: defaultTextFieldCode),
                       ],
@@ -83,7 +83,7 @@ DropdownButtonFormField(
                     const SizedBox(height: 16.0),
                     BlueCodeBlock(
                       code: passwordFieldCode,
-                      language: 'dart',
+                      language: CodeBlockLanguage.dart,
                       actions: [
                         BlueCopyButton(content: passwordFieldCode),
                       ],
@@ -98,7 +98,7 @@ DropdownButtonFormField(
                     const SizedBox(height: 16.0),
                     BlueCodeBlock(
                       code: searchFieldCode,
-                      language: 'dart',
+                      language: CodeBlockLanguage.dart,
                       actions: [
                         BlueCopyButton(content: searchFieldCode),
                       ],
@@ -126,7 +126,7 @@ DropdownButtonFormField(
                     const SizedBox(height: 16.0),
                     BlueCodeBlock(
                       code: dropdownCode,
-                      language: 'dart',
+                      language: CodeBlockLanguage.dart,
                       actions: [
                         BlueCopyButton(content: dropdownCode),
                       ],
