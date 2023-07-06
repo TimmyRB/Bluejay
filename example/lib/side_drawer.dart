@@ -44,11 +44,19 @@ class SideDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.text_fields),
-            title: const Text('Text Fields'),
+            leading: const Icon(Icons.keyboard),
+            title: const Text('Inputs'),
             onTap: () {
               Navigator.pop(context);
-              Navigator.pushReplacementNamed(context, '/text_fields');
+              Navigator.pushReplacementNamed(context, '/inputs');
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.data_array),
+            title: const Text('Data Display'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacementNamed(context, '/display');
             },
           ),
         ],

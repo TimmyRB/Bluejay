@@ -27,11 +27,20 @@ class _MyAppState extends State<FinancialExample> {
             title: Text('Financial Example'),
             pinned: true,
           ),
-          SliverPadding(
-            padding: const EdgeInsets.only(
+          const SliverPadding(
+            padding: EdgeInsets.only(
               left: 16.0,
               right: 16.0,
               bottom: 8.0,
+            ),
+            sliver: SliverToBoxAdapter(
+              child: BlueSearchFormField(),
+            ),
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16.0,
+              vertical: 8.0,
             ),
             sliver: SliverToBoxAdapter(
               child: Card(
