@@ -21,7 +21,6 @@ class BlueCodeBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(language.toPrettyString());
     return Card(
       child: Column(
         mainAxisSize: MainAxisSize.min,
