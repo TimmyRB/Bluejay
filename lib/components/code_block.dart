@@ -7,7 +7,8 @@ class BlueCodeBlock extends StatelessWidget {
   const BlueCodeBlock({
     Key? key,
     required this.code,
-    required this.language,
+    this.language = CodeBlockLanguage.plaintext,
+    this.icon = Icons.code,
     this.actions = const [],
     this.actionSpacing = 4.0,
     this.showActionBar = true,
@@ -15,6 +16,7 @@ class BlueCodeBlock extends StatelessWidget {
 
   final String code;
   final CodeBlockLanguage language;
+  final IconData? icon;
   final List<Widget> actions;
   final double actionSpacing;
   final bool showActionBar;
@@ -57,12 +59,13 @@ class BlueCodeBlock extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.code,
-                    size: 16.0,
-                    color: Theme.of(context).colorScheme.onPrimary,
-                  ),
-                  const SizedBox(width: 4.0),
+                  if (icon != null)
+                    Icon(
+                      icon,
+                      size: 16.0,
+                      color: Theme.of(context).colorScheme.onPrimary,
+                    ),
+                  if (icon != null) const SizedBox(width: 4.0),
                   Text(
                     language.toPrettyString().toUpperCase(),
                     style: TextStyle(
