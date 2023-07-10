@@ -1,4 +1,4 @@
-import 'package:bluejay_example/side_drawer.dart';
+import 'package:bluejay_example/widgets/side_drawer.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
