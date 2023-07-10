@@ -15,22 +15,29 @@ export 'package:bluejay/components/password_field.dart';
 export 'package:bluejay/components/search_field.dart';
 
 class Bluejay {
-  static ThemeData lightTheme({OverrideTheme? overrideColors}) {
+  static ThemeData lightTheme({
+    OverrideTheme? overrideColors,
+    bool merge = true,
+  }) {
     LightTheme lightTheme = LightTheme();
 
-    return _themeData(lightTheme, Brightness.light, overrideColors);
+    return _themeData(lightTheme, Brightness.light, overrideColors, merge);
   }
 
-  static ThemeData darkTheme({OverrideTheme? overrideColors}) {
+  static ThemeData darkTheme({
+    OverrideTheme? overrideColors,
+    bool merge = true,
+  }) {
     DarkTheme darkTheme = DarkTheme();
 
-    return _themeData(darkTheme, Brightness.dark, overrideColors);
+    return _themeData(darkTheme, Brightness.dark, overrideColors, merge);
   }
 
   static ThemeData _themeData(
     BlueThemeData theme,
     Brightness brightness,
     OverrideTheme? overrideTheme,
+    bool merge,
   ) {
     return ThemeData(
       brightness: brightness,
@@ -62,38 +69,55 @@ class Bluejay {
           color: overrideTheme?.primaryColor ?? theme.primaryColor,
         ),
       ),
-      cardTheme: CardTheme(
-        color: overrideTheme?.cardColor ?? theme.cardColor,
-        elevation: 0.0,
-        margin: EdgeInsets.zero,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12.0),
-        ),
-      ),
-      tabBarTheme: TabBarTheme(
-        splashFactory: NoSplash.splashFactory,
-        labelColor: overrideTheme?.backgroundColor ?? theme.backgroundColor,
-        unselectedLabelColor:
-            overrideTheme?.secondaryColor ?? theme.secondaryColor,
-        indicator: BoxDecoration(
-          borderRadius: BorderRadius.circular(12.0),
-          color: overrideTheme?.primaryColor ?? theme.primaryColor,
-        ),
-      ),
+      cardTheme: overrideTheme?.cardTheme ??
+          CardTheme(
+            color: overrideTheme?.cardColor ?? theme.cardColor,
+            elevation: 0.0,
+            margin: EdgeInsets.zero,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
+          ),
+      tabBarTheme: overrideTheme?.tabBarTheme ??
+          TabBarTheme(
+            splashFactory: NoSplash.splashFactory,
+            labelColor: overrideTheme?.backgroundColor ?? theme.backgroundColor,
+            unselectedLabelColor:
+                overrideTheme?.secondaryColor ?? theme.secondaryColor,
+            indicator: BoxDecoration(
+              borderRadius: BorderRadius.circular(12.0),
+              color: overrideTheme?.primaryColor ?? theme.primaryColor,
+            ),
+          ),
       dividerColor: overrideTheme?.secondaryColor ?? theme.secondaryColor,
       inputDecorationTheme:
           overrideTheme?.inputDecorationTheme ?? theme.inputDecorationTheme,
       filledButtonTheme: FilledButtonThemeData(
-        style: overrideTheme?.filledButtonStyle ?? theme.filledButtonStyle,
+        style: merge
+            ? (overrideTheme?.filledButtonStyle
+                    ?.merge(theme.filledButtonStyle) ??
+                theme.filledButtonStyle)
+            : (overrideTheme?.filledButtonStyle ?? theme.filledButtonStyle),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
-        style: overrideTheme?.elevatedButtonStyle ?? theme.filledButtonStyle,
+        style: merge
+            ? (overrideTheme?.elevatedButtonStyle
+                    ?.merge(theme.filledButtonStyle) ??
+                theme.filledButtonStyle)
+            : (overrideTheme?.elevatedButtonStyle ?? theme.filledButtonStyle),
       ),
       textButtonTheme: TextButtonThemeData(
-        style: overrideTheme?.textButtonStyle ?? theme.textButtonStyle,
+        style: merge
+            ? (overrideTheme?.textButtonStyle?.merge(theme.textButtonStyle) ??
+                theme.textButtonStyle)
+            : (overrideTheme?.textButtonStyle ?? theme.textButtonStyle),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
-        style: overrideTheme?.outlinedButtonStyle ?? theme.textButtonStyle,
+        style: merge
+            ? (overrideTheme?.outlinedButtonStyle
+                    ?.merge(theme.textButtonStyle) ??
+                theme.textButtonStyle)
+            : (overrideTheme?.outlinedButtonStyle ?? theme.textButtonStyle),
       ),
     );
   }

@@ -14,6 +14,10 @@ class OverrideTheme extends BlueThemeData {
   @override
   Color? cardColor;
 
+  CardTheme? cardTheme;
+
+  TabBarTheme? tabBarTheme;
+
   @override
   Color? boxColor;
 
