@@ -117,7 +117,7 @@ class _BlueBreakdownState extends State<BlueBreakdown> {
                       .ceil(),
                   child: Container(
                     height: 16,
-                    color: Theme.of(context).primaryColor.withOpacity(0.15),
+                    color: Theme.of(context).highlightColor,
                   ),
                 ),
             ],

@@ -70,6 +70,16 @@ class Bluejay {
           borderRadius: BorderRadius.circular(12.0),
         ),
       ),
+      tabBarTheme: TabBarTheme(
+        splashFactory: NoSplash.splashFactory,
+        labelColor: overrideTheme?.backgroundColor ?? theme.backgroundColor,
+        unselectedLabelColor:
+            overrideTheme?.secondaryColor ?? theme.secondaryColor,
+        indicator: BoxDecoration(
+          borderRadius: BorderRadius.circular(12.0),
+          color: overrideTheme?.primaryColor ?? theme.primaryColor,
+        ),
+      ),
       dividerColor: overrideTheme?.secondaryColor ?? theme.secondaryColor,
       inputDecorationTheme:
           overrideTheme?.inputDecorationTheme ?? theme.inputDecorationTheme,
