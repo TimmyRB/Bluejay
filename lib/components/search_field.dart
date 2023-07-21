@@ -4,6 +4,8 @@ class BlueSearchFormField extends StatefulWidget {
   const BlueSearchFormField({
     super.key,
     this.labelText = 'Search',
+    this.hintText,
+    this.errorText,
     this.controller,
     this.initialValue,
     this.validator,
@@ -16,6 +18,8 @@ class BlueSearchFormField extends StatefulWidget {
   });
 
   final String? labelText;
+  final String? hintText;
+  final String? errorText;
   final TextEditingController? controller;
   final String? initialValue;
   final String? Function(String?)? validator;
@@ -64,6 +68,8 @@ class _BlueSearchFormFieldState extends State<BlueSearchFormField> {
       },
       decoration: InputDecoration(
         labelText: widget.labelText,
+        hintText: widget.hintText,
+        errorText: widget.errorText,
         prefixIcon: Icon(widget.searchIcon),
         suffixIcon: _showClear
             ? IconButton(
