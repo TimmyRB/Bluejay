@@ -4,6 +4,7 @@ class BluePasswordFormField extends StatefulWidget {
   const BluePasswordFormField({
     Key? key,
     this.labelText = 'Password',
+    this.hintText,
     this.controller,
     this.initialValue,
     this.validator,
@@ -16,6 +17,7 @@ class BluePasswordFormField extends StatefulWidget {
   }) : super(key: key);
 
   final String? labelText;
+  final String? hintText;
   final TextEditingController? controller;
   final String? initialValue;
   final String? Function(String?)? validator;
@@ -50,6 +52,7 @@ class _BluePasswordFormFieldState extends State<BluePasswordFormField> {
           : const [AutofillHints.password],
       decoration: InputDecoration(
         labelText: widget.labelText,
+        hintText: widget.hintText,
         suffixIcon: IconButton(
           splashColor: Colors.transparent,
           highlightColor: Colors.transparent,

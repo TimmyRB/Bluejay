@@ -43,6 +43,13 @@ class LightTheme extends BlueThemeData {
       fontWeight: FontWeight.w400,
       color: Color(0xFF5E5E5E),
     ),
+    hintStyle: const TextStyle(
+      fontFamily: 'UberMoveText',
+      package: 'bluejay',
+      fontSize: 18.0,
+      fontWeight: FontWeight.w400,
+      color: Color(0xFF5E5E5E),
+    ),
   );
 
   @override

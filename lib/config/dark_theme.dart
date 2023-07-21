@@ -42,6 +42,12 @@ class DarkTheme extends BlueThemeData {
       fontWeight: FontWeight.w400,
       color: Color(0xFFCDCDCD),
     ),
+    hintStyle: const TextStyle(
+      fontFamily: 'UberMoveText',
+      fontSize: 18.0,
+      fontWeight: FontWeight.w400,
+      color: Color(0xFFCDCDCD),
+    ),
   );
 
   @override
