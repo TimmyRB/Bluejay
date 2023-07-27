@@ -49,7 +49,10 @@ class Bluejay {
       ),
       scaffoldBackgroundColor:
           overrideTheme?.backgroundColor ?? theme.backgroundColor,
-      highlightColor: overrideTheme?.boxColor ?? theme.boxColor,
+      canvasColor: overrideTheme?.boxColor ?? theme.boxColor,
+      splashColor: overrideTheme?.splashColor ?? theme.splashColor,
+      highlightColor: overrideTheme?.highlightColor ?? theme.highlightColor,
+      hoverColor: overrideTheme?.hoverColor ?? theme.hoverColor,
       fontFamily: overrideTheme?.fontFamily ?? theme.fontFamily,
       package: overrideTheme?.package ?? theme.package,
       textTheme: overrideTheme?.textTheme ?? theme.textTheme,

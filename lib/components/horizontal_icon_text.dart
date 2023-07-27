@@ -22,7 +22,7 @@ class BlueHorizontalIconAndText extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.0),
-            color: Theme.of(context).highlightColor,
+            color: Theme.of(context).canvasColor,
           ),
           child: Icon(icon),
         ),

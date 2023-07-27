@@ -18,6 +18,15 @@ class DarkTheme extends BlueThemeData {
   Color? boxColor = const Color(0xFF303030);
 
   @override
+  Color? splashColor = Colors.transparent;
+
+  @override
+  Color? highlightColor = Colors.transparent;
+
+  @override
+  Color? hoverColor = Colors.transparent;
+
+  @override
   String? fontFamily = 'UberMoveText';
 
   @override
@@ -48,6 +57,17 @@ class DarkTheme extends BlueThemeData {
       fontWeight: FontWeight.w400,
       color: Color(0xFFCDCDCD),
     ),
+  );
+
+  @override
+  BottomNavigationBarThemeData? bottomNavigationBarTheme =
+      BottomNavigationBarThemeData(
+    type: BottomNavigationBarType.fixed,
+    backgroundColor: const Color(0xFF161616),
+    selectedItemColor: Colors.white,
+    unselectedItemColor: Colors.white.withOpacity(0.5),
+    showSelectedLabels: false,
+    showUnselectedLabels: false,
   );
 
   @override

@@ -14,6 +14,15 @@ class OverrideTheme extends BlueThemeData {
   @override
   Color? cardColor;
 
+  @override
+  Color? splashColor;
+
+  @override
+  Color? highlightColor;
+
+  @override
+  Color? hoverColor;
+
   CardTheme? cardTheme;
 
   TabBarTheme? tabBarTheme;
@@ -32,6 +41,9 @@ class OverrideTheme extends BlueThemeData {
 
   @override
   InputDecorationTheme? inputDecorationTheme;
+
+  @override
+  BottomNavigationBarThemeData? bottomNavigationBarTheme;
 
   @override
   ButtonStyle? filledButtonStyle;
