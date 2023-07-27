@@ -95,6 +95,8 @@ class Bluejay {
       dividerColor: overrideTheme?.secondaryColor ?? theme.secondaryColor,
       inputDecorationTheme:
           overrideTheme?.inputDecorationTheme ?? theme.inputDecorationTheme,
+      bottomNavigationBarTheme: overrideTheme?.bottomNavigationBarTheme ??
+          theme.bottomNavigationBarTheme,
       filledButtonTheme: FilledButtonThemeData(
         style: merge
             ? (overrideTheme?.filledButtonStyle
